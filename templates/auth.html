@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Авторизация{% endblock %}
+{% block content %}
+<h2 align="center">Авторизация</h2>
+{% if message %}
+    {{message}}
+{% endif %}
+<form action="/auth" method="post">
+    <p>
+        <label for="login">Login: </label>
+        <input type="text" id="login" name="login">
+    </p>
+    <p>
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password">
+    </p>
+
+    <p>
+        <button class="btn">Авторизация</button>
+    </p>
+</form>
+{% endblock %}

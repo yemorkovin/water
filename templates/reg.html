@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Регистрация{% endblock %}
+{% block content %}
+<h2 align="center">Регистрация</h2>
+{% if message %}
+    {{message}}
+{% endif %}
+<form action="/reg" method="post">
+    <p>
+        <label for="login">Login: </label>
+        <input type="text" id="login" name="login">
+    </p>
+    <p>
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password">
+    </p>
+     <p>
+        <label for="password_rep">Repeat password: </label>
+        <input type="password" id="password_rep" name="password_rep">
+    </p>
+    <p>
+        <button class="btn">Регистрация</button>
+    </p>
+</form>
+{% endblock %}
